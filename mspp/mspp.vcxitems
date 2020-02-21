@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{d9698c6b-9946-44d7-a2f0-de264969fb61}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)mspp\Networking\TcpServer.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)mspp\Networking\TcpSession.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)mspp\Utils\DebugUtils.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)mspp\Utils\IterableUtils.hpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)mspp\Utils\third_party.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)mspp\Main.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)mspp\Networking\TcpServer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)mspp\Networking\TcpSession.cpp" />
+  </ItemGroup>
+</Project>

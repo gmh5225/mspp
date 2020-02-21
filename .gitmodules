@@ -1,0 +1,6 @@
+[submodule "third_party/asio/asio-1.14.0"]
+	path = third_party/asio/asio-1.14.0
+	url = https://github.com/chriskohlhoff/asio
+[submodule "third_party/fmt/fmt-6.1.2"]
+	path = third_party/fmt/fmt-6.1.2
+	url = https://github.com/fmtlib/fmt

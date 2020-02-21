@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <fmt_dir>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</fmt_dir>
+    <fmt_version>6.1.2</fmt_version>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(fmt_dir)\fmt-$(fmt_version)\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>FMT_HEADER_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="fmt_dir">
+      <Value>$(fmt_dir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="fmt_version">
+      <Value>$(fmt_version)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
